@@ -3,7 +3,7 @@ This is a working example of a backend that can allow [GGRN](http://github.com/e
 ### Explanation
 
 - **Basics:** Create a Docker image. Upon running, any container from this image should:
-    - read training data from `to_from_docker/train.ad`. You can expect this training data to pass the checks in `ggrn.validate_training_data(train)`.
+    - read training data from `to_from_docker/train.h5ad`. You can expect this training data to pass the checks in `ggrn.validate_training_data(train)`.
     - read perturbations to predict in `to_from_docker/perturbations.json`. You can expect a list of lists like `[["NANOG", 5.43], ["KLF4", 6.78]]`, meaning you should predict one observation where NANOG expression is set to 5.34 and another where KLF4 expression is set to 6.78. For multi-gene perturbations, you'll find comma-separated lists as strings, and yes, I'm very sorry about this. An example: `[["NANOG,POU5F1", "5.43,0.0"], ["KLF4,SOX2", "6.78,9.12"]]`. 
     - train your method and make those predictions, preserving the order.
     - save the predictions in `h5ad` format as `to_from_docker/predictions.h5ad`. To be ultra-safe about not scrambling them, the order is expected to match what you find in `perturbations.json`, and the `.obs` is expected to have a column `perturbation` and a column `expression_level_after_perturbation`. You can reuse the boilerplate from our example below.
