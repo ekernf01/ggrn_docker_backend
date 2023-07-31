@@ -13,7 +13,7 @@ This is a working example of a backend that can allow [GGRN](http://github.com/e
 
 ### Example
 
-To try it out, install [GGRN](https://github.com/ekernf01/ggrn) and obtain some [test data](https://github.com/ekernf01/perturbation_data), then run the following. One way to set up your environment is documented in our [benchmarking project](http://github.com/ekernf01/perturbation_benchmarking).
+To try it out, install [GGRN](https://github.com/ekernf01/ggrn) and obtain some [test data](https://github.com/ekernf01/perturbation_data), then run the following. We recommend setting up your environment as documented in our [benchmarking project](http://github.com/ekernf01/perturbation_benchmarking).
 
 ```python
 import ggrn.api as ggrn
